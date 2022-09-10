@@ -5,3 +5,6 @@ const getAsyncName = () => {
 const getAsyncChurch = () => {
   return new Promise((r) => setTimeout(r("Async Kosofe BC", 500)));
 };
+
+exports.getAsyncChurch = getAsyncChurch;
+exports.getAsyncName = getAsyncName;
