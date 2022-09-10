@@ -29,18 +29,22 @@ const store = configureStore({
   },
 });
 
+const { addName } = nameSlice.actions;
+
+const { addChurch } = churchSlice.actions;
+
 // update the church store
-store.dispatch({ type: "church/addChurch", payload: "FBC Alapere" });
+store.dispatch(addChurch("FBC Alapere"));
 
 // update the name store
-store.dispatch({ type: "name/addName", payload: "Kayode" });
+store.dispatch(addName("Kayode"));
 
 // to perform async dispatch, you can make use of thunks
 // thunks are special kinda redux function that can contain async logic
 
 const addChurchAsync = () => async (dispatch) => {
   const churchName = await getAsyncChurch();
-  dispatch({ type: "church/addChurch", payload: churchName });
+  dispatch(addChurch(churchName));
 };
 
 store.dispatch(addChurchAsync());
