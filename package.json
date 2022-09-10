@@ -1,0 +1,11 @@
+{
+  "name": "redux-learning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:zt4ff/redux-learning.git",
+  "author": "zt4ff <segunkayode00@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5"
+  }
+}
